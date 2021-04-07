@@ -6,7 +6,7 @@ i= 0
 while i < row:
     j= 0
     while j<column:
-        print("*", " ",  end="")
+        print("*",  end="")
         j= j+1
 
     print("")
