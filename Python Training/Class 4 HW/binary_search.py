@@ -9,23 +9,33 @@ num= [int(i) for i in list_split]
 print("Length of the list is:", len(num))
 print(" ")
 
+num.sort()
+print("Sorted Numbers:")
+for i in num:
+     print(i)
+
+print(" ")
+
 search= int(input("Enter the Search Item:"))
 
 first= 0
 last= len(num)-1
 mid= 0
+gate=True
 
-while (first<=last):
-    mid=(first+last)//2
-    if num[mid] == search:
-        print("Search Found in Index:", mid)
-        break
+if search>=num[first] and search<=num[last]:
+    print("Search Item in the list")
+    while (first <= last) and gate:
+        mid = (first + last) // 2
+        if num[mid] == search:
+            print("Search Found in Index:", mid)
+            break
 
-    elif num[mid]<search:
-        first=mid + 1
-    else:
-        last = mid - 1
+        elif num[mid] < search:
+            first = mid + 1
+        else:
+            last = mid - 1
 
-    if mid == -1:
-        print("Search Item not Found")
+else:
+    print("Search Item not Found")
 
