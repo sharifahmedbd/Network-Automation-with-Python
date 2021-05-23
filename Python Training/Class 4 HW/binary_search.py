@@ -10,9 +10,9 @@ print("Length of the list is:", len(num))
 print(" ")
 
 num.sort()
-print("Sorted Numbers:")
-for i in num:
-     print(i)
+print("Sorted Numbers: ", end="")
+for i in range (len(num)):
+     print(num[i], end=" ")
 
 print(" ")
 
@@ -28,7 +28,7 @@ if search>=num[first] and search<=num[last]:
     while (first <= last) and gate:
         mid = (first + last) // 2
         if num[mid] == search:
-            print("Search Found in Index:", mid)
+            print("Search Item Found in Index:", mid)
             break
 
         elif num[mid] < search:
